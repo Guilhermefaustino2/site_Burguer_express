@@ -1,18 +1,7 @@
 let listaDeCompras = [];
 let indiceEdicao = -1;
 
-// function limpaCampos() {
-//     document.getElementById('quantidade').value = 1; // Definindo o valor inicial como 1
-// }
-
 function salvar(nomeItem, precoItem, quantidade) {
-    //let quantidade = parseInt(document.getElementById('quantidade').value);
-    
-    // Verifica se a quantidade é válida (maior que 0)
-    // if (quantidade <= 0 || isNaN(quantidade)) {
-    //     alert("A quantidade deve ser pelo menos 1.");
-    //     return;
-    // }
 
     let valorTotal = (precoItem * quantidade).toFixed(2);
 
@@ -53,13 +42,6 @@ function diminuirQuantidade(indice) {
     }
     obj.valorTotal = parseFloat((unitario * obj.quantidade), 0).toFixed(2);
     atualizarTabela();
-}
-
-function editarItem(indice) {
-    indiceEdicao = indice;
-    let obj = listaDeCompras[indice];
-
-    document.getElementById('quantidade').value = obj.quantidade;
 }
 
 function excluirItem(indice) {
